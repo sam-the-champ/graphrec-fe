@@ -127,10 +127,10 @@ repeatedly.
 
 ## 4. Screenshots
 
-![Landing page](doc/graphrec%20landing%20page.png)
-![Login page](doc/graphrec%20login%20page.png)
-![Recommendations](doc/recommendation.png)
-![Profile page](doc/profile.png)
+![Landing page](docs/graphrec%20landing%20page.png)
+![Login page](docs/graphrec%20login%20page.png)
+![Recommendations](docs/recommendation.png)
+![Profile page](docs/profile.png)
 
 ![screenrecording](https://youtu.be/bCZwfmyDYu8)
 
