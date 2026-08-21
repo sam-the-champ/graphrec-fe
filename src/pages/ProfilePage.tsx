@@ -91,10 +91,10 @@ export default function ProfilePage() {
         <p className="mt-2 text-sm text-slate-500">
           check your{' '} 
           <a href="/dashboard" className="font-medium text-brand-600 hover:text-brand-700">
-            recommendations
-          </a>
-          for now.. learning activity will be available in the future.
-          .
+            recommendations 
+          </a>...
+           learning activity will be available in the future.
+          
         </p>
       </Card>
     </div>
