@@ -32,8 +32,7 @@ export function clearStoredToken(): void {
   localStorage.removeItem(TOKEN_STORAGE_KEY);
 }
 
-// Attach the bearer token (backend expects `Authorization: Bearer <token>`,
-// see auth.middleware.js) to every outgoing request, if we have one.
+
 apiClient.interceptors.request.use((config) => {
   const token = getStoredToken();
   if (token) {

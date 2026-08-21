@@ -89,10 +89,7 @@ export default function ProfilePage() {
       <Card className="mt-6 p-5 sm:p-8">
         <h2 className="text-base font-semibold text-slate-900">Learning activity</h2>
         <p className="mt-2 text-sm text-slate-500">
-          The API doesn't yet expose a history of your liked or completed tutorials (there's no
-          endpoint that returns them), so this section can't show one without making something up.
-          Your likes and completions are still recorded in the graph — you'll see their effect in
-          your{' '}
+          check your{' '} for now.. learning activity will be available in the future.
           <a href="/dashboard" className="font-medium text-brand-600 hover:text-brand-700">
             recommendations
           </a>
