@@ -89,10 +89,11 @@ export default function ProfilePage() {
       <Card className="mt-6 p-5 sm:p-8">
         <h2 className="text-base font-semibold text-slate-900">Learning activity</h2>
         <p className="mt-2 text-sm text-slate-500">
-          check your{' '} for now.. learning activity will be available in the future.
+          check your{' '} 
           <a href="/dashboard" className="font-medium text-brand-600 hover:text-brand-700">
             recommendations
           </a>
+          for now.. learning activity will be available in the future.
           .
         </p>
       </Card>
