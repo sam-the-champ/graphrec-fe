@@ -18,13 +18,14 @@ import type { TutorialDetail } from '@/types/tutorial';
  * meaningfully show that this page doesn't already cover. Splitting them
  * would just add a redundant route around the same three buttons.
  *
- * IMPORTANT LIMITATION (flagged, not hidden): GET /api/tutorials/:id does
- * NOT tell us whether the current user has already liked/viewed/completed
- * this tutorial — there's no such field on the Tutorial node and no
- * endpoint that joins in the current user's relationships. So "Liked" /
- * "Completed" indicators below only reflect actions taken THIS session;
- * they reset on page reload. This is a backend gap, not a frontend bug —
- * see the README for the suggested backend addition.
+ * UPDATE: GET /api/tutorials/:id now returns userHasViewed/userHasLiked/
+ * userHasCompleted whenever the request carries a valid token
+ * (optionalAuth middleware on that route, tutorial.repository.js
+ * findById()). Button state below is seeded from those flags on load,
+ * so "Liked ✓" / "Completed ✓" now survive a page reload — they're no
+ * longer session-only. For a logged-out visitor, these flags are always
+ * false (there's no "current user" to check against), which is correct,
+ * not a bug.
  */
 export default function TutorialDetailsPage() {
   const { id } = useParams<{ id: string }>();
@@ -59,6 +60,12 @@ export default function TutorialDetailsPage() {
       .then((result) => {
         if (cancelled) return;
         setTutorial(result);
+        // Seed button state from the backend's per-user flags instead of
+        // always starting blank — this is what makes "Liked ✓" /
+        // "Completed ✓" survive a page reload now.
+        setHasViewed(result.userHasViewed);
+        setHasLiked(result.userHasLiked);
+        setHasCompleted(result.userHasCompleted);
       })
       .catch((err) => {
         if (cancelled) return;

@@ -41,13 +41,19 @@ export interface TutorialCourseRef {
 
 /**
  * Extended shape returned ONLY by GET /api/tutorials/:id
- * (tutorial.repository.js `findById()`).
+ * (tutorial.repository.js `findById()`). The three `userHas*` flags are
+ * only meaningful when the request carried a valid token (optionalAuth
+ * on that route) — for anonymous requests they always come back false,
+ * not because the user hasn't interacted, but because there's no user.
  */
 export interface TutorialDetail extends Tutorial {
   topics: TutorialTopicRef[];
   skills: TutorialSkillRef[];
   instructor: TutorialInstructorRef | null;
   course: TutorialCourseRef | null;
+  userHasViewed: boolean;
+  userHasLiked: boolean;
+  userHasCompleted: boolean;
 }
 
 export interface CreateTutorialPayload {
