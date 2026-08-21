@@ -125,11 +125,25 @@ repeatedly.
 
 ## 4. Screenshots
 
+**Landing page**
 
 ![Landing page](docs/graphrec%20landing%20page.png)
+
+
+**Login page**
+
 ![Login page](docs/graphrec%20login%20page.png)
+
+**Recommendations**
+
 ![Recommendations](docs/recommendation.png)
+
+**Profile**
+
 ![Profile page](docs/profile.png)
+
+**Video demo**
+
 [![Watch the demo](https://img.youtube.com/vi/bCZwfmyDYu8/0.jpg)](https://youtu.be/bCZwfmyDYu8)
 
 ---
