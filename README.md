@@ -132,7 +132,7 @@ repeatedly.
 ![Recommendations](doc/recommendation.png)
 ![Profile page](doc/profile.png)
 
-![screenrecording](doc/graphrec.mp4)
+![screenrecording](https://youtu.be/bCZwfmyDYu8)
 
 ---
 
